@@ -4,7 +4,7 @@
 sudo apt-get update
 
 # Install Python
-sudo apt-get install -y python3-pip unzip
+sudo apt-get install -y python3-pip git unzip
 
 # Install Monitoring Tools
 sudo apt-get install -y net-tools sysstat vnstat iotop iftop bwm-ng htop munin
@@ -28,10 +28,6 @@ sudo apt-get -y install apt-transport-https ca-certificates gnupg
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 sudo apt-get update && sudo apt-get install -y google-cloud-sdk
 
-# Install kubectl
-sudo apt-get install -y apt-transport-https ca-certificates curl
-gcloud install kubectl 
-
 # Install AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
@@ -49,6 +45,20 @@ sudo apt-get install -y helm
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 sudo apt install terraform --yes
+
+# SNAPS
+# Install VS Code
+sudo snap install --classic code
+
+# Install kubectl
+sudo snap install kubectl --classic
+
+# Configure with Azure AKS
+# az login
+# az aks get-credentials --resource-group NAN-rg --name NAN-Lab-K8S
+# echo 'source <(kubectl completion bash)' >>~/.bashrc
+# source .bashrc
+
 
 
 
