@@ -3,6 +3,12 @@
 # Update Ubuntu
 sudo apt-get update
 
+# Install Python
+sudo apt-get install -y python3-pip 
+
+# Install Monitoring Tools
+sudo apt-get install -y net-tools sysstat vnstat iotop iftop bwm-ng htop munin
+
 # Install Azure CLI
 # (Taken from https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt)
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
