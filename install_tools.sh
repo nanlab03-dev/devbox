@@ -4,7 +4,7 @@
 sudo apt-get update
 
 # Install Python
-sudo apt-get install -y python3-pip 
+sudo apt-get install -y python3-pip unzip
 
 # Install Monitoring Tools
 sudo apt-get install -y net-tools sysstat vnstat iotop iftop bwm-ng htop munin
@@ -29,6 +29,7 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyr
 sudo apt-get update && sudo apt-get install -y google-cloud-sdk
 
 # Install kubectl
+sudo apt-get install -y apt-transport-https ca-certificates curl
 gcloud install kubectl 
 
 # Install AWS CLI
