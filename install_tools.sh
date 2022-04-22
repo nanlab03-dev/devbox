@@ -51,7 +51,7 @@ sudo apt install terraform --yes
 sudo snap install --classic code
 
 # Install kubectl
-sudo snap install kubectl --classic
+sudo snap install --classic kubectl 
 
 # Configure with Azure AKS
 # az login
