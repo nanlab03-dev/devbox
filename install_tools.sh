@@ -7,7 +7,14 @@ sudo apt-get update
 sudo apt-get install -y python3-pip git unzip
 
 # Install Monitoring Tools
-sudo apt-get install -y net-tools sysstat vnstat iotop iftop bwm-ng htop munin
+sudo apt-get install -y net-tools sysstat vnstat iotop iftop bwm-ng htop munin 
+
+# Install Other tools
+sudo apt-get install -y vim psutil
+
+# Install Glances
+# (Taken from https://github.com/nicolargo/glances)
+curl -L https://bit.ly/glances | sudo /bin/bash
 
 # Install Azure CLI
 # (Taken from https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt)
